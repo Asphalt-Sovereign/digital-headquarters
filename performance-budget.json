@@ -1,0 +1,7 @@
+{
+  "maxRouteJavaScriptGzipBytes": 230000,
+  "maxRouteCssGzipBytes": 50000,
+  "maxHtmlBytes": 350000,
+  "maxImageBytes": 300000,
+  "maxTotalExportBytes": 10000000
+}

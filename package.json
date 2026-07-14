@@ -1,0 +1,49 @@
+{
+  "name": "asphalt-sovereign-digital-headquarters",
+  "version": "1.1.0",
+  "private": true,
+  "description": "The official digital headquarters of Asphalt Sovereign, an early-stage automotive engineering startup.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node scripts/clean-export.mjs",
+    "build": "next build",
+    "start": "node scripts/serve-static.mjs",
+    "content:build": "next typegen",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate:data": "node scripts/validate-data.mjs",
+    "validate:static": "node scripts/validate-static.mjs",
+    "audit:performance": "node scripts/audit-performance.mjs",
+    "validate": "npm run content:build && npm run validate:data && npm run lint && npm run typecheck && npm run build && npm run validate:static && npm run audit:performance && npm run format:check"
+  },
+  "dependencies": {
+    "@content-collections/core": "0.15.2",
+    "@content-collections/mdx": "0.2.2",
+    "@content-collections/next": "0.2.11",
+    "clsx": "2.1.1",
+    "framer-motion": "12.42.2",
+    "lucide-react": "1.24.0",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "remark-gfm": "4.0.1",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "26.1.1",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.2.10",
+    "prettier": "3.9.5",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "tailwindcss": "4.3.2",
+    "typescript": "6.0.3"
+  }
+}

@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+/upload
+
+# Content Collections generated data
+/.content-collections
+
+# local environment files
+.env*
+!.env.example
+
+# editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+
+# logs and caches
+*.log
+.eslintcache
+*.tsbuildinfo
+
+# deployment
+.vercel
